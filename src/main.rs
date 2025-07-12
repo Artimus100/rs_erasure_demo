@@ -62,7 +62,6 @@ fn main() {
     // Step 6: Combine the first k shards to recover the original data
     let reconstructed: Vec<u8> = combine_shards(&shards_option[0..k], data.len());
 
-    // Output results
     println!("Original: {:?}", String::from_utf8(data.to_vec()).unwrap());
     println!("Reconstructed: {:?}", String::from_utf8(reconstructed).unwrap());
 }
